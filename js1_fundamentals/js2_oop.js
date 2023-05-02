@@ -13,6 +13,7 @@ class Developer{
         this.languages.push(newLanguage);
         this.braincell++;
         console.log(`${this.name} is learning ${newLanguage}`);
+        console.log(`${this.constructor.name}`)
         return this;
     }
 
@@ -52,3 +53,5 @@ console.log(dev1)
 const dev4 = new SeniorDeveloper("Senior dev", 50);
 dev4.debug().debug()
 console.log(dev4);
+
+dev2.learnLanguage("test")
