@@ -4,11 +4,9 @@ const IcecreamForm = (props) => {
     const [flavor, setFlavor] = useState("")
     const [quantity, setQuantity] = useState(0)
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const newIcecream = { flavor, quantity }
-        
         props.onCreate(newIcecream);
 
         // clear the form

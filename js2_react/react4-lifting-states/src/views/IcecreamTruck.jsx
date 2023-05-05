@@ -24,7 +24,9 @@ const IcecreamTruck = () => {
         <div>
             <IcecreamForm onCreate={receiveNewOrder}/>
 
-            <IcecreamTable icecreamList={icecreamList} onDelete={handleDelete}/>
+            <IcecreamTable 
+                icecreamList={icecreamList} 
+                onDelete={handleDelete}/>
 
 
         </div>

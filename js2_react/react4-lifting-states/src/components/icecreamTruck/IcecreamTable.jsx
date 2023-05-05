@@ -15,7 +15,7 @@ const IcecreamTable = (props) => {
                 <tbody>
                     {
                         props.icecreamList.map((eachIcecream, idx) =>
-                            <tr key={idx}>
+                            <tr key={idx} >
                                 <td>{eachIcecream.flavor}</td>
                                 <td>{eachIcecream.quantity}</td>
                                 <td>
