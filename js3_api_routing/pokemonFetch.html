@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        console.log("start") 
+        fetch("https://pokeapi.co/api/v2/pokemon") // return a promise --> pending, resolve, reject
+            .then(response=>{ // fulfilled the promise
+                console.log("in .then");
+                return response.json(); // return another promise --> pending, resolve, reject
+            })
+            .then((jsonResponse)=>{
+                console.log(jsonResponse);
+            })
+            .catch(err=>console.log(err));
+        console.log("end");
+            // 1. console log start
+            // 2. fetch ---> take time.....
+             // 3. console log end
+
+    </script>
+</body>
+
+</html>
