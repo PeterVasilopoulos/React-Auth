@@ -20,6 +20,10 @@ const DestinationSchema = new mongoose.Schema({
         required: [true, "Season is required"]
     }
 
-}, {timestamps : true})
+}, {timestamps : true}) // createdAt & updatedAt
 
-module.exports = mongoose.model('Destination', DestinationSchema);
+// option 1
+// module.exports = mongoose.model('Destination', DestinationSchema);
+
+// option 2
+module.exports.Destination = mongoose.model('Destination', DestinationSchema);

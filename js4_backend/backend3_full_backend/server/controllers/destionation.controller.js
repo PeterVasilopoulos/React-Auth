@@ -1,4 +1,8 @@
-const Destination = require("../models/destination.model")
+// option 1
+// const Destination = require("../models/destination.model")
+
+// option2
+const {Destination} = require("../models/destination.model")
 
 // test api
 module.exports.apiTest = (req, res)=>{
