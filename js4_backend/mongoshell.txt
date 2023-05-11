@@ -1,0 +1,8 @@
+db.item.findOne({name : 'TV'})
+
+db.item.find({price : {$gt: 100}  })
+
+
+db.item.updateMany({}, {$addToSet:{shops: 'Craigslist'}})
+
+db.item.updateMany({price : {$gt: 100}}, {$inc: {price: 1}})
