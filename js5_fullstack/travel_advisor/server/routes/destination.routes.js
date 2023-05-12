@@ -1,5 +1,6 @@
 const DestController = require("../controllers/destionation.controller")
 
+// localhost:8000
 module.exports = (app)=>{
     app.get("/api/testing", DestController.apiTest);
     app.get("/api/destinations", DestController.allDest);

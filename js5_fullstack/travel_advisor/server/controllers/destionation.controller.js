@@ -40,7 +40,7 @@ module.exports.updateDest = (req, res)=>{
         // new: true -- return the updated object
         // runValidator -- to perform validation specified in model
     )
-        .then(updatedDest =>res.json(updatedDest))
+        .then(updatedDest =>res.json(updatedDest)) 
         .catch(err=>res.json(err))
 }
 
