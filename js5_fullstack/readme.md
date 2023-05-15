@@ -7,7 +7,7 @@
 
 ## Exam Day
 1. On exam day, you will be given the exam code 
-2. Start the exam by 10AM MST
+2. Start the exam by 10AM (Mountain time)
 
 ## AVAILABLE RESOURCES
 1. my github
