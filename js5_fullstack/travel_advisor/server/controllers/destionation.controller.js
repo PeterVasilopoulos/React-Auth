@@ -13,21 +13,21 @@ module.exports.apiTest = (req, res)=>{
 module.exports.allDest = (req, res)=>{
     Destination.find() // array of objects
         .then(destList => res.json(destList))
-        .catch(err=>res.json(err))
+        .catch(err=>res.status(400).json(err))
 }
 
 // one destination
 module.exports.oneDest = (req, res)=>{
     Destination.findOne({_id: req.params.id}) // return the found object
         .then(foundDest => res.json(foundDest))
-        .catch(err=>res.json(err))
+        .catch(err=>res.status(400).json(err))
 }
 
 // create dest
 module.exports.addDest = (req, res)=>{
     Destination.create(req.body) // will return the created object
         .then(newDest => res.json(newDest))
-        .catch(err=>res.json(err))
+        .catch(err=>res.status(400).json(err)) // res.json --> status 200
 }
 
 
@@ -41,7 +41,7 @@ module.exports.updateDest = (req, res)=>{
         // runValidator -- to perform validation specified in model
     )
         .then(updatedDest =>res.json(updatedDest)) 
-        .catch(err=>res.json(err))
+        .catch(err=>res.status(400).json(err))
 }
 
 
@@ -49,5 +49,5 @@ module.exports.updateDest = (req, res)=>{
 module.exports.deleteDest = (req, res)=>{
     Destination.deleteOne({_id: req.params.id})
         .then(status=> res.json(status))
-        .catch(err=>res.json(err))
+        .catch(err=>res.status(400).json(err))
 }

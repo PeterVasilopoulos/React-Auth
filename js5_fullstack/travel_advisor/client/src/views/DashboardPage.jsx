@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 const DashboardPage = () => {
     const [destList, setDestList] = useState([])
 
+
     useEffect(() => {
         axios.get(`http://localhost:8000/api/destinations`)
             .then(response => {
@@ -22,6 +23,8 @@ const DashboardPage = () => {
             .then(response => {
                 // logic after delete
                 removeFromDom(deleteId)
+//                 navigate(`/dashboard`) //  switch to dashboard compon
+                
             })
             .catch(err => console.log(err))
     }
