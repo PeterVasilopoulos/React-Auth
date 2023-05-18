@@ -1,1 +1,1 @@
-Credit to Christian Land (https://github.com/christianMLand/mern_auth_new)
+Credits to Christian Land (https://github.com/christianMLand/mern_auth_new)
