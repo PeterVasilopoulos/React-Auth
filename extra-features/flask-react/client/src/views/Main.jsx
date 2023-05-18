@@ -17,7 +17,7 @@ const Main = () => {
     }
 
     const removeFromDOM = (id) => {
-        setStudents(students.filter(student => student.id != id))
+        setStudents(students.filter(student => student.id !== id))
     }
 
     const updateDOM = updatedStudent => {

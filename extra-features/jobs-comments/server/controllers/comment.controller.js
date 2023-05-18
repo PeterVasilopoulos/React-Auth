@@ -17,7 +17,7 @@ module.exports.commentsOfOneJob = (req, res) => {
 
 
 // add a comment
-module.exports.addComment = (req, res) => {
+module.exports.addComment = (req, res) => { 
     const jobId = req.params.jobId
     const newComment = new Comment(req.body)
     newComment.job = jobId
